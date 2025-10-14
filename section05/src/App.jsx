@@ -3,6 +3,8 @@ import "./App.css";
 import { useState } from "react";
 import Bulb from "./components/Bulb";
 import Counter from "./components/Counter";
+import Register from "./components/Register";
+import HookExam from "./components/HookExam";
 //리액트 앱에서는 예외적으로 esm방식이라도 확장자 생략가능.
 
 //component base example
@@ -60,10 +62,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <Bulb />
-      </div>
-      <Counter />
+      <br />
+      <HookExam />
     </>
   );
 }
