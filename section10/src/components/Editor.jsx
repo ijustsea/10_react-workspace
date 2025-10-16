@@ -27,7 +27,6 @@ const Editor = ({ onCreate }) => {
   // ref 로 dom 요소를 연결해주기 .
   return (
     <div className="Editor">
-      {/*
       <input
         ref={contentRef}
         value={content}
@@ -36,7 +35,6 @@ const Editor = ({ onCreate }) => {
         placeholder="대출할 도서를 입력하세요..."
       />
       <button onClick={onSubmit}>추가</button>
-      */}
     </div>
   );
 };

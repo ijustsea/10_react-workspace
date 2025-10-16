@@ -1,7 +1,10 @@
 import "./Editor.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import { memo } from "react";
+import { TodoDispatchContext } from "../App";
 
-const Editor = ({ onCreate }) => {
+const Editor = () => {
+  const { onCreate } = useContext(TodoDispatchContext);
   const [content, setContent] = useState("");
   const contentRef = useRef();
 
@@ -27,7 +30,6 @@ const Editor = ({ onCreate }) => {
   // ref 로 dom 요소를 연결해주기 .
   return (
     <div className="Editor">
-      {/*
       <input
         ref={contentRef}
         value={content}
@@ -36,9 +38,8 @@ const Editor = ({ onCreate }) => {
         placeholder="대출할 도서를 입력하세요..."
       />
       <button onClick={onSubmit}>추가</button>
-      */}
     </div>
   );
 };
 
-export default Editor;
+export default memo(Editor);

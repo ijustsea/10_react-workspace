@@ -1,0 +1,23 @@
+.Editor {
+  display: flex;
+  gap: 10px;
+  /*요소의 간격을 띄울때 display : flex 후 gap을 지정*/
+}
+
+.Editor > input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+}
+
+.Editor > button {
+  cursor: pointer;
+  width: 80px;
+  background-color: rgb(255, 165, 0);
+  color: beige;
+  border: none;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 15px;
+}
