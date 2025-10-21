@@ -1,0 +1,38 @@
+.EmotionItem {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.EmotionItem .emotion_img {
+  display: flex;
+  direction: row;
+  width: 70%;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.EmotionItem_on_1 {
+  background-color: rgb(100, 201, 100); /* 예시 색상 */
+}
+.EmotionItem_on_2 {
+  background-color: rgb(157, 215, 114); /* 예시 색상 */
+}
+.EmotionItem_on_3 {
+  background-color: rgb(253, 206, 23); /* 예시 색상 */
+}
+.EmotionItem_on_4 {
+  background-color: #ff9d00; /* 예시 색상 */
+}
+.EmotionItem_on_5 {
+  background-color: #ff0400; /* 예시 색상 */
+}
+
+.emotion_list_wrapper {
+  width: 100%;
+  display: flex;
+  gap: 1%;
+}
