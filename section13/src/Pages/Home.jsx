@@ -3,6 +3,7 @@ import { DiaryStateContext } from "../App";
 import Header from "../components/Header";
 import Button from "../components/Buttons";
 
+import usePageTitle from "../hooks/usePageTitle";
 import DiaryList from "../components/DiaryList";
 
 // 해당 월에 일기를 조회해주는 함수
@@ -34,6 +35,8 @@ const Home = () => {
   const data = useContext(DiaryStateContext); // all 모든일기
 
   const [pivotDate, setPivotDate] = useState(new Date());
+
+  usePageTitle("감정일기장");
 
   const monthlyData = getMonthlyData(pivotDate, data); // [{},{}]
   console.log(monthlyData);
