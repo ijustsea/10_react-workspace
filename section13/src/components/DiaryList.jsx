@@ -1,6 +1,8 @@
 import "./DiaryList.css";
-import Button from "./Button";
-import DiaryItem from "./DiaryItem.JSX";
+
+import Button from "./Buttons";
+import DiaryItem from "./DiaryItem";
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -16,21 +18,21 @@ const DiaryList = ({ data }) => {
   const getSortedData = () => {
     return data.toSorted((a, b) => {
       if (sortType === "oldest") {
-        return Number(a.createDate) - Number(b.createDate);
+        return Number(a.createdDate) - Number(b.createdDate);
       } else {
-        return Number(b.createDate) - Number(a.createDate);
+        return Number(b.createdDate) - Number(a.createdDate);
       }
     });
   };
 
-  const sortedData = getSortedData(); //정렬된 데이터
+  const sortedData = getSortedData(); // 정렬된 데이터!
 
   return (
     <div className="DiaryList">
       <div className="menu_bar">
-        <select onChange={onChangeSortType} name="" id="">
-          <option value="latest">최신순</option>
-          <option value="oldest">오래된순</option>
+        <select onChange={onChangeSortType}>
+          <option value={"latest"}>최신순</option>
+          <option value={"oldest"}>오래된 순</option>
         </select>
         <Button
           onClick={() => nav("/new")}
@@ -46,4 +48,5 @@ const DiaryList = ({ data }) => {
     </div>
   );
 };
+
 export default DiaryList;

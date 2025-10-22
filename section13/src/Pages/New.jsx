@@ -1,6 +1,6 @@
+import Header from "./../components/Header";
+import Button from "./../components/Buttons";
 import Editor from "./../components/Editor";
-import Header from "../components/Header";
-import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { DiaryDispatchContext } from "../App";
@@ -9,8 +9,8 @@ const New = () => {
   const { onCreate } = useContext(DiaryDispatchContext);
   const nav = useNavigate();
 
-  const onSubmit = (input) => {
-    onCreate(input.createDate.getTime(), input.emotionId, input.content);
+  const onSumbit = (input) => {
+    onCreate(input.createdDate.getTime(), input.emotionId, input.content);
     nav("/", { replace: true });
   };
 
@@ -18,12 +18,18 @@ const New = () => {
     <div>
       <Header
         title={"새 일기 쓰기"}
-        leftChild={<Button text={"<"} onClick={() => nav(-1)} />}
+        leftChild={
+          <Button
+            onClick={() => {
+              nav(-1);
+            }}
+            text={"< 뒤로 가기"}
+          />
+        }
       />
-      <Editor onSubmit={onSubmit} />
+      <Editor onSubmit={onSumbit} />
     </div>
   );
 };
 
 export default New;
-//New라는 페이지에서 editor부를 떄 일기작성
