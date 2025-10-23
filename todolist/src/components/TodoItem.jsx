@@ -27,16 +27,19 @@ const TodoItem = ({ id, startTime, endTime, content, isDone }) => {
 
   return (
     <div className="TodoItem">
+      <div>
+        <input onChange={onChangeCheckbox} type="checkbox" checked={isDone} />
+        &nbsp;{isDone === true ? "completed" : "unfinished"}
+      </div>
       <div className="info_section">
         <div className="start_time">{formatDateTime(startTime)}</div>
         <div className="end_time">{formatDateTime(endTime)}</div>
         <div className="content">{content}</div>
       </div>
-      <div>
-        <input onChange={onChangeCheckbox} type="checkbox" checked={isDone} />
-      </div>
+
       <div className="button_section">
-        <Button onClick={() => nav(`/edit/${id}`)} text={"수정하기"} />
+        <Button onClick={() => nav(`/edit/${id}`)} text={"수정"} />
+        <Button text={"삭제"} />
       </div>
     </div>
   );
