@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Galmuri11";
+  src: url("/Galmuri11-Bold.ttf");
+}
+
+body * {
+  font-family: "Galmuri11";
+  padding: 2px;
+}
