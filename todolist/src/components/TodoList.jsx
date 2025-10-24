@@ -1,3 +1,4 @@
+import "./TodoList.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TodoItem from "./TodoItem";
@@ -26,7 +27,7 @@ const TodoList = ({ data }) => {
   return (
     <div>
       <div>
-        <select value={sortType} onChange={onChangeSortType}>
+        <select className="select" value={sortType} onChange={onChangeSortType}>
           <option value={"latest"}>빠른순</option>
           <option value={"oldest"}>늦은순</option>
         </select>

@@ -27,7 +27,7 @@ const New = () => {
           />
         }
       />
-      <Editor onSubmit={onSubmit} />
+      <Editor onSubmit={onSubmit} text={"일정생성"} />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { useEffect, useState } from "react";
 
-const Editor = ({ initData, onSubmit }) => {
+const Editor = ({ initData, onSubmit, text }) => {
   const nav = useNavigate();
   const now = new Date();
 
@@ -31,6 +31,10 @@ const Editor = ({ initData, onSubmit }) => {
   };
 
   const onClickSubmitButton = () => {
+    if (input.content.trim() === "") {
+      alert("일정 내용을 입력해주세요.");
+      return;
+    }
     onSubmit(input);
   };
 
@@ -73,8 +77,8 @@ const Editor = ({ initData, onSubmit }) => {
         />
       </section>
       <section className="button_section">
-        <Button onClick={() => nav(-1)} text={"취소하기"} />
-        <Button onClick={onClickSubmitButton} text={"일정생성"} />
+        <Button onClick={() => nav(-1)} text={"취소하기"} type={"DELETE"} />
+        <Button onClick={onClickSubmitButton} text={text} />
       </section>
     </div>
   );

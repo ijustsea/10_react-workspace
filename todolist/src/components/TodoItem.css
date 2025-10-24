@@ -1,0 +1,92 @@
+.TodoItem {
+  padding: 8px 15px;
+  border: 2px solid #333;
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+}
+
+.TodoItem > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  min-width: 120px;
+}
+
+/* 기본 체크박스 숨기기 */
+.TodoItem input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #000;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  box-shadow: inset -2px -2px 0 0 #808080, inset 2px 2px 0 0 #dfdfdf;
+  image-rendering: pixelated;
+  transition: all 0.1s;
+}
+
+/* 체크 박스 V (체크 마크) */
+.TodoItem input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 8px;
+  height: 16px;
+  border: solid #00ff00;
+  border-width: 0 3px 3px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* 체크했을 때 박스 스타일 */
+.TodoItem input[type="checkbox"]:checked {
+  background: #000;
+  border-color: #00ff00;
+  box-shadow: 0 0 10px #00ff00, inset 0 0 5px #00ff00;
+}
+
+.TodoItem input[type="checkbox"]:checked + span {
+  color: #00ff00;
+  text-shadow: 2px 2px 0 #000, 0 0 10px #00ff00;
+}
+
+.info_section {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.info_section .content {
+  flex: 0 1 auto;
+  font-size: 16px;
+}
+
+.info_section .time_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.info_section .start_time,
+.info_section .end_time {
+  font-size: 11px;
+  white-space: nowrap;
+  color: #00ff00;
+}
+
+.button_section {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
