@@ -1,0 +1,115 @@
+.Editor {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #000000;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  border: 1px solid #00ff00;
+}
+
+.date_section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  border: 1px solid #00ff00;
+}
+
+.date_section h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #00ff00;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.date_section input[type="datetime-local"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.2s;
+  color: #00ff00;
+  background: #000000;
+}
+
+.date_section input[type="datetime-local"]:last-child {
+  margin-bottom: 0;
+}
+
+.date_section input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: #00ff00;
+  background: #000000;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.content_section {
+  margin-bottom: 30px;
+}
+
+.content_section h4 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ff00;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.content_section textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.2s;
+  line-height: 1.6;
+  color: #00ff00;
+  background: #000000;
+}
+
+.content_section textarea:focus {
+  outline: none;
+  border-color: #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.content_section textarea::placeholder {
+  color: #00ff0080;
+}
+
+.button_section {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.button_section button {
+  flex: 1;
+  max-width: 150px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .Editor {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .content_section textarea {
+    min-height: 150px;
+  }
+
+  .button_section button {
+    max-width: none;
+  }
+}

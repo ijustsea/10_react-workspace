@@ -1,3 +1,4 @@
+import "./Editor.css";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import { useEffect, useState } from "react";

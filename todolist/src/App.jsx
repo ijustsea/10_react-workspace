@@ -5,6 +5,8 @@ import { Routes, Route } from "react-router-dom";
 import New from "./pages/New";
 import Notfound from "./pages/Notfound";
 import Edit from "./pages/Edit";
+import TetrisBackground from "./components/TetrisBackground";
+
 const mockData = [
   {
     id: 1,
@@ -144,6 +146,7 @@ function App() {
 
   return (
     <>
+      <TetrisBackground />
       <TodoStateContext.Provider value={data}>
         <TodoDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
           <Routes>
